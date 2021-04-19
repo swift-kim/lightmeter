@@ -1,7 +1,7 @@
 name: lightmeter
 description: A new Flutter project.
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sensors: ^0.4.0
+  sensors: ^0.4.2+6
   sensors_tizen:
-    path: ../plugins/packages/sensors
+    path: sensors
 
 dev_dependencies:
   flutter_test:
