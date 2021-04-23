@@ -3,13 +3,12 @@ description: A new Flutter project.
 publish_to: "none"
 version: 1.0.0
 
-environment:
-  sdk: ">=2.7.0 <3.0.0"
-
 dependencies:
   flutter:
     sdk: flutter
-  sensors: ^0.4.2+6
+  google_fonts: ^2.0.0
+  path_provider_tizen: ^2.0.0
+  sensors: ^2.0.0
   sensors_tizen:
     path: sensors
 
@@ -19,3 +18,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/google_fonts/
+
+environment:
+  sdk: '>=2.9.0 <3.0.0'
+  flutter: ">=2.0.0"

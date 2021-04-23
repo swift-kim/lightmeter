@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sensors/sensors.dart';
 
 void main() {
@@ -58,9 +59,9 @@ class _MainPageState extends State<MainPage> {
         ),
         Text(
           '$value',
-          style: TextStyle(
-            fontSize: 100,
-            fontWeight: FontWeight.w200,
+          style: GoogleFonts.roboto(
+            fontSize: 80,
+            fontWeight: FontWeight.w300,
             color: Colors.grey[600],
             decoration: TextDecoration.none,
           ),
@@ -72,8 +73,8 @@ class _MainPageState extends State<MainPage> {
               flex: 1,
               child: Text(
                 'lux',
-                style: TextStyle(
-                  fontSize: 30,
+                style: GoogleFonts.roboto(
+                  fontSize: 25,
                   fontWeight: FontWeight.w300,
                   color: Colors.grey[600],
                   decoration: TextDecoration.none,
