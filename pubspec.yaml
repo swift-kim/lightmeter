@@ -6,11 +6,13 @@ version: 1.0.0
 dependencies:
   flutter:
     sdk: flutter
-  google_fonts: ^2.0.0
   path_provider_tizen: ^2.0.0
   sensors: ^2.0.0
   sensors_tizen:
     path: sensors
+  wakelock: ^0.5.1
+  wakelock_tizen:
+    path: ../plugins/packages/wakelock
 
 dev_dependencies:
   flutter_test:
@@ -18,8 +20,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/google_fonts/
 
 environment:
   sdk: '>=2.9.0 <3.0.0'

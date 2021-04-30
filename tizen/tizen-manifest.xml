@@ -9,4 +9,7 @@
     </ui-application>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <feature name="http://tizen.org/feature/sensor.photometer"/>
+    <privileges>
+        <privilege>http://tizen.org/privilege/display</privilege>
+    </privileges>
 </manifest>

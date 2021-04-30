@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sensors/sensors.dart';
+import 'package:wakelock/wakelock.dart';
 
 void main() {
   runApp(MyApp());
@@ -32,6 +32,9 @@ class _MainPageState extends State<MainPage> {
 
   void initState() {
     super.initState();
+
+    Wakelock.enable();
+
     _listener = gyroscopeEvents.listen((GyroscopeEvent event) {
       final newValue = event.x.round();
       if (value != newValue) {
@@ -59,8 +62,10 @@ class _MainPageState extends State<MainPage> {
         ),
         Text(
           '$value',
-          style: GoogleFonts.roboto(
-            fontSize: 80,
+          maxLines: 1,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 100,
             fontWeight: FontWeight.w300,
             color: Colors.grey[600],
             decoration: TextDecoration.none,
@@ -73,7 +78,7 @@ class _MainPageState extends State<MainPage> {
               flex: 1,
               child: Text(
                 'lux',
-                style: GoogleFonts.roboto(
+                style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w300,
                   color: Colors.grey[600],
