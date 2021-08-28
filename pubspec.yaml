@@ -1,12 +1,11 @@
 name: lightmeter
 description: A new Flutter project.
-publish_to: "none"
+publish_to: 'none'
 version: 1.1.0
 
 dependencies:
   flutter:
     sdk: flutter
-  path_provider_tizen: ^2.0.0
   sensors: ^2.0.0
   sensors_tizen:
     path: sensors
@@ -22,5 +21,5 @@ flutter:
   uses-material-design: true
 
 environment:
-  sdk: '>=2.9.0 <3.0.0'
-  flutter: ">=2.0.0"
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: '>=2.0.0'

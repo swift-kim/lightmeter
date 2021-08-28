@@ -15,16 +15,11 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  StreamSubscription<GyroscopeEvent> _listener;
+  late StreamSubscription<GyroscopeEvent> _listener;
   int _luxValue = 0;
   bool _useFootcandle = false;
 
   @override
-  void dispose() {
-    super.dispose();
-    _listener?.cancel();
-  }
-
   void initState() {
     super.initState();
 
@@ -36,6 +31,13 @@ class _MainPageState extends State<MainPage> {
         setState(() => _luxValue = newValue);
       }
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    _listener.cancel();
   }
 
   @override
@@ -70,6 +72,7 @@ class _MainPageState extends State<MainPage> {
               fontWeight: FontWeight.w300,
               color: Colors.grey[600],
               decoration: TextDecoration.none,
+              letterSpacing: -2.0,
             ),
           ),
           Column(
