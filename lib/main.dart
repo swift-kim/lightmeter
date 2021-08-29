@@ -63,7 +63,7 @@ class _MainPageState extends State<MainPage> {
           ),
           Text(
             _useFootcandle
-                ? (_luxValue / 10.764).toStringAsFixed(2)
+                ? (_luxValue / 10.764).toStringAsFixed(1)
                 : _luxValue.toString(),
             maxLines: 1,
             textAlign: TextAlign.center,
