@@ -1,7 +1,10 @@
 name: lightmeter
 description: A new Flutter project.
 publish_to: 'none'
-version: 1.1.1
+version: 1.1.2
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -10,9 +13,4 @@ dependencies:
   sensors_tizen:
     path: sensors
   wakelock: ^0.5.1
-  wakelock_tizen:
-    path: ../plugins/packages/wakelock
-
-environment:
-  sdk: '>=2.12.0 <3.0.0'
-  flutter: '>=2.0.0'
+  wakelock_tizen: ^1.0.0

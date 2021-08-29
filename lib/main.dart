@@ -47,7 +47,6 @@ class _MainPageState extends State<MainPage> {
         setState(() => _useFootcandle = !_useFootcandle);
       },
       child: Stack(
-        alignment: Alignment(0, 0),
         children: <Widget>[
           Column(
             children: <Widget>[
@@ -61,36 +60,32 @@ class _MainPageState extends State<MainPage> {
               ),
             ],
           ),
-          Text(
-            _useFootcandle
-                ? (_luxValue / 10.764).toStringAsFixed(1)
-                : _luxValue.toString(),
-            maxLines: 1,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 100,
-              fontWeight: FontWeight.w300,
-              color: Colors.grey[600],
-              decoration: TextDecoration.none,
-              letterSpacing: -2.0,
+          Center(
+            child: Text(
+              _useFootcandle
+                  ? (_luxValue / 10.764).toStringAsFixed(1)
+                  : _luxValue.toString(),
+              maxLines: 1,
+              style: TextStyle(
+                fontSize: 100,
+                fontWeight: FontWeight.w300,
+                color: Colors.grey[600],
+                decoration: TextDecoration.none,
+                letterSpacing: -2.0,
+              ),
             ),
           ),
-          Column(
-            children: <Widget>[
-              Expanded(flex: 2, child: Container()),
-              Expanded(
-                flex: 1,
-                child: Text(
-                  _useFootcandle ? 'fc' : 'lux',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w300,
-                    color: Colors.grey[600],
-                    decoration: TextDecoration.none,
-                  ),
-                ),
+          Align(
+            alignment: Alignment(0, 0.6),
+            child: Text(
+              _useFootcandle ? 'fc' : 'lux',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w300,
+                color: Colors.grey[600],
+                decoration: TextDecoration.none,
               ),
-            ],
+            ),
           ),
         ],
       ),
